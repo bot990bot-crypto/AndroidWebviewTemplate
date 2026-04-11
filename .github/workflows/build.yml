@@ -17,6 +17,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Delete broken template files
+        run: rm -rf app/src/main/java/com/example/androidWebViewOfflineApplication/ui
+        working-directory: ./02.AndroidWebviewOfflineAppTemplate
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
         working-directory: ./02.AndroidWebviewOfflineAppTemplate
