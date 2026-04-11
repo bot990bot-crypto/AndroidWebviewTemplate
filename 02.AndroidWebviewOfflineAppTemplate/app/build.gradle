@@ -15,6 +15,15 @@ android {
         versionName "1.0"
     }
 
+    // THIS IS THE MAGIC RULE
+    sourceSets {
+        main {
+            java {
+                exclude '**/ui/**'
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
