@@ -25,12 +25,12 @@ jobs:
         run: chmod +x gradlew
         working-directory: ./02.AndroidWebviewOfflineAppTemplate
 
-      - name: Build APK
-        run: ./gradlew assembleDebug
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
         working-directory: ./02.AndroidWebviewOfflineAppTemplate
 
-      - name: Upload APK
+      - name: Upload Release APK
         uses: actions/upload-artifact@v4
         with:
-          name: Snake-Game-APK
-          path: 02.AndroidWebviewOfflineAppTemplate/app/build/outputs/apk/debug/app-debug.apk
+          name: Snake-Game-Release-APK
+          path: 02.AndroidWebviewOfflineAppTemplate/app/build/outputs/apk/release/*.apk
